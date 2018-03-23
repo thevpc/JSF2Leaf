@@ -1,6 +1,36 @@
 # Overview
 JSF2Leaf is a JavaServer Faces component that allows a simpler way to insert maps in your webpage using just a tag, like any other JSF component. This is possible because JSF2Leaf wraps the <a href="http://leafletjs.com">Leaflet</a> map library, using <a href="http://www.openstreetmap.org">OpenStreetMap</a> as map provider.
 
+### Added Maven Support
+
+to use this project in maven you have to add the following dependency and repository definitions in your pom.xml
+
+```xml
+
+<dependencies>
+    <dependency>
+        <groupId>com.jsf2leaf</groupId>
+        <artifactId>jsf2leaf</artifactId>
+        <version>1.0.0</version>
+    <dependency>
+</dependencies>
+
+
+<repositories>
+        <repository>
+            <id>vpc-public-maven</id>
+            <url>https://raw.github.com/thevpc/vpc-public-maven/master</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+</repositories>
+
+```
+
+
+
 ### Features
 * Simple, just a single tag and you have a map!
 * Support Markers, Layers, Polylines, Circles and [Clusterization](http://leaflet.github.io/Leaflet.markercluster/example/marker-clustering-realworld.10000.html)
